@@ -1,6 +1,6 @@
 {
   "name": "ova-browser",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A browser-friendly version of Ova! Ova is an Object VAlidator that is light, extensible, and schema-based.",
   "main": "index.js",
   "scripts": {

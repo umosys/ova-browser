@@ -1,11 +1,3 @@
-var assert = require('assert');
-var ObjectID = null;
-
-try {
-	ObjectID = require('mongodb').ObjectID;
-}
-catch(err) {}
-
 module.exports = function(object, schema) {
 	return validate(object, schema);
 };
@@ -125,16 +117,6 @@ var validateType = function(val, ruleVal) {
 			break;
 		case 'object':
 			if (typeof val != 'object')
-				return errorMsg;
-			break;
-		case 'objectId':
-			if (typeof val.toHexString !== 'function')
-				return errorMsg;
-			break;
-		case 'objectIdString':
-			assert(ObjectID != null);
-			
-			if (!ObjectID.isValid(val))
 				return errorMsg;
 			break;
 		case 'string':
