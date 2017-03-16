@@ -6,6 +6,10 @@ A browser-friendly version of Ova! Ova is an Object VAlidator that is light, ext
 
 ---
 
+## What's New In 1.2.0
+
+- Added 'eq' rule to check for string/number equality
+
 ## Installation
 
 ```
@@ -158,6 +162,21 @@ var schema = {
 	writers: { _rules: { type: 'array', arrayType: 'string' } }
 };
 ```
+
+### eq
+
+Data type: *string, number*
+
+Checks if property is equal to specified target.
+
+```
+var schema = {
+	title: { _rules: { type: 'string', eq: '300' } },
+	rating: { _rules: { type: 'number', eq: 1 } }
+};
+```
+
+> Important: Does not work for arrays and objects
 
 ### min
 
